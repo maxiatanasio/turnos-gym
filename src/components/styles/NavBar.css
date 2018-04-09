@@ -1,0 +1,13 @@
+nav{
+	height: 50px;
+	width: 100%;
+	background: #42a5f5; 
+}
+
+nav figure{
+	width: 110px;
+	height: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}

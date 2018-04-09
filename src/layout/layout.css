@@ -2,4 +2,36 @@
 	margin: auto;
 	width: 100%;
 	max-width: 1024px;
+	padding: 15px;
 }
+
+.container.flex {
+	display: flex
+}
+
+.row{
+	margin-bottom: 10px;
+}
+
+.container .row{
+	overflow: hidden;
+}
+
+.container .col{
+	box-sizing: border-box;
+	float: left;
+	padding: 10px;
+}
+
+.container .col1{width: 8.333333%}
+.container .col2{width: 16.666666%}
+.container .col3{width: 25%}
+.container .col4{width: 33.333333%}
+.container .col5{width: 41.6666666%}
+.container .col6{width: 50%}
+.container .col7{width: 58.333333%}
+.container .col8{width: 66.666666%}
+.container .col9{width: 75%}
+.container .col10{width: 83.333333%}
+.container .col11{width: 91.666666%}
+.container .col12{width: 100%}

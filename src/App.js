@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import PrivateRoute from "./routes/PrivateRoute.js";
 import './App.css';
+import './styles/normalize.css';
 
 import NavBar from './components/NavBar';
 import Home from './routes/Home';
