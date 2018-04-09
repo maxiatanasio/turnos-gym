@@ -1,0 +1,19 @@
+{
+  "name": "turnos-gym",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxiatanasio/turnos-gym.git"
+  },
+  "author": "Maximiliano Atanasio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxiatanasio/turnos-gym/issues"
+  },
+  "homepage": "https://github.com/maxiatanasio/turnos-gym#readme"
+}
