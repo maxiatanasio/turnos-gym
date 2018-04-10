@@ -1,0 +1,17 @@
+.calendar-reservation{
+    width: 100%;
+}
+
+.calendar-reservation-title{
+    text-align: center;
+    padding: 10px;
+}
+
+.calendar-reservation-table-container table {
+    width: 100%;
+}
+
+.calendar-reservation-table-container table thead tr th{
+    text-align: center;
+    text-transform: uppercase;
+}
