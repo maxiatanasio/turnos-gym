@@ -3,13 +3,16 @@
 	width: 100%;
 	max-width: 1024px;
 	padding: 15px;
+	box-sizing: border-box;
 }
 
 .container.flex {
-	display: flex
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .row{
+	width: 100%;
 	margin-bottom: 10px;
 }
 
@@ -23,15 +26,53 @@
 	padding: 10px;
 }
 
-.container .col1{width: 8.333333%}
-.container .col2{width: 16.666666%}
-.container .col3{width: 25%}
-.container .col4{width: 33.333333%}
-.container .col5{width: 41.6666666%}
-.container .col6{width: 50%}
-.container .col7{width: 58.333333%}
-.container .col8{width: 66.666666%}
-.container .col9{width: 75%}
-.container .col10{width: 83.333333%}
-.container .col11{width: 91.666666%}
-.container .col12{width: 100%}
+.container .col-l1{width: 8.333333%}
+.container .col-l2{width: 16.666666%}
+.container .col-l3{width: 25%}
+.container .col-l4{width: 33.333333%}
+.container .col-l5{width: 41.6666666%}
+.container .col-l6{width: 50%}
+.container .col-l7{width: 58.333333%}
+.container .col-l8{width: 66.666666%}
+.container .col-l9{width: 75%}
+.container .col-l10{width: 83.333333%}
+.container .col-l11{width: 91.666666%}
+.container .col-l12{width: 100%}
+
+.container.flex > .col{
+	flex: 1 0 auto;
+}
+
+.container.flex > .row{
+	flex: 1 0 100%;
+}
+
+@media screen and (max-width : 900px){
+	.container .col-m1{width: 8.333333%}
+	.container .col-m2{width: 16.666666%}
+	.container .col-m3{width: 25%}
+	.container .col-m4{width: 33.333333%}
+	.container .col-m5{width: 41.6666666%}
+	.container .col-m6{width: 50%}
+	.container .col-m7{width: 58.333333%}
+	.container .col-m8{width: 66.666666%}
+	.container .col-m9{width: 75%}
+	.container .col-m10{width: 83.333333%}
+	.container .col-m11{width: 91.666666%}
+	.container .col-m12{width: 100%}
+}
+
+@media screen and (max-width : 600px){
+	.container .col-s1{width: 8.333333%}
+	.container .col-s2{width: 16.666666%}
+	.container .col-s3{width: 25%}
+	.container .col-s4{width: 33.333333%}
+	.container .col-s5{width: 41.6666666%}
+	.container .col-s6{width: 50%}
+	.container .col-s7{width: 58.333333%}
+	.container .col-s8{width: 66.666666%}
+	.container .col-s9{width: 75%}
+	.container .col-s10{width: 83.333333%}
+	.container .col-s11{width: 91.666666%}
+	.container .col-s12{width: 100%}
+}

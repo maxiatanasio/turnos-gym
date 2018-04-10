@@ -7,16 +7,13 @@ export default class Home extends React.Component {
 		return (
 			<Container>
 				<Row>
-					<Col col="12">
+					<Col large="12">
 						<UserInfo />
 					</Col>
 				</Row>
 				<Row>
-					<Col col="6">
+					<Col large="12">
 						<CalendarReservation />
-					</Col>
-					<Col col="6">
-						<p>Segunda columna</p>
 					</Col>
 				</Row>
 
