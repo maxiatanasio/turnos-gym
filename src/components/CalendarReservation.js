@@ -21,7 +21,7 @@ export default class CalendarReservation extends React.Component {
 
 	render(){
 		return (
-			<div className="calendar-reservation">
+			<div className={`calendar-reservation ${this.props.className ? this.props.className : ''}`}>
 				<div className="calendar-reservation-title">
 					Mayo 2018 - 14 al 20
 				</div>
@@ -29,6 +29,7 @@ export default class CalendarReservation extends React.Component {
 					<table>
 						<thead>
 							<tr>
+								<td></td>
 								<th>LUN</th>
 								<th>MAR</th>
 								<th>MIE</th>
@@ -41,10 +42,11 @@ export default class CalendarReservation extends React.Component {
 						<tbody>
 							{this.data.map((hour, hourTxt) => {
 								return (
-									<tr>
-										{hour.map(day => {
+									<tr key={hourTxt}>
+										<th>{hourTxt}</th>
+										{hour.map((day, dayTxt) => {
 											return (
-												<td>{hourTxt}</td>
+												<td key={`${hourTxt}-${dayTxt}`}></td>
 											)
 										})}
 									</tr>
