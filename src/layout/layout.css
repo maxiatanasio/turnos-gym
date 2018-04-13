@@ -23,7 +23,7 @@
 .container .col{
 	box-sizing: border-box;
 	float: left;
-	padding: 10px;
+	padding: 22px;
 }
 
 .container .col-l1{width: 8.333333%}
