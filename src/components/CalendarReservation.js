@@ -6,7 +6,6 @@ export default class CalendarReservation extends React.Component {
 	constructor(props){
 		super(props);
 		this.generateData();
-		console.log(this.props.calendarData.calendar[1]);
 	}
 
 	generateData(){
@@ -24,6 +23,11 @@ export default class CalendarReservation extends React.Component {
 		} else {
 			return false;
 		}
+	}
+
+	onReservationClickHandle = (calendarEvent, day, hour) => {
+		calendarEvent.user_reservation = !calendarEvent.user_reservation;
+		this.props.onReservationClickHandle(calendarEvent, day, hour);
 	}
 
 	data = []
@@ -53,11 +57,22 @@ export default class CalendarReservation extends React.Component {
 										<th></th>
 										<th>{hourTxt}</th>
 										{hour.map((day, dayTxt) => {
-
-										if(this.searchCalendarDayHour(dayTxt, hourTxt)){
+										const calendarHourDayData = this.searchCalendarDayHour(dayTxt, hourTxt);
+										if(calendarHourDayData){
 											return (
 												<td key={`${hourTxt}-${dayTxt}`} className="has-activity">
-													<div className="reservation-options-container"></div>
+													<div className="reservation-options-container" onClick={() => this.onReservationClickHandle(calendarHourDayData, dayTxt, hourTxt)}>
+														{
+															calendarHourDayData.user_reservation ? 
+															<div className="has-reservation">
+																<img src="images/check.png" />
+																<span>{calendarHourDayData.name}</span>
+															</div>:
+															<div className="no-reservation">
+																<span>{calendarHourDayData.name}</span>
+															</div>
+														}
+													</div>
 												</td>
 											)
 										} else {

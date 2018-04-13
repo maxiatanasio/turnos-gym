@@ -23,20 +23,24 @@ const calendarData = {
 		1 : {
 			7 : {
 				"id_activity" : 123456,
+				"name" : "Crossfit",
 				"user_reservation" : false						
 			},
 			8 : {
 				"id_activity" : 123456,
-				"user_reservation" : false
+				"name" : "Crossfit",
+				"user_reservation" : true
 			}
 		},
 		2 : {
 			9 : {
 				"id_activity" : 123457,
-				"user_reservation" : false
+				"name" : "Funcional",
+				"user_reservation" : true
 			},
 			10 : {
 				"id_activity" : 123457,
+				"name" : "Funcional",
 				"user_reservation" : false
 			}
 		}
@@ -44,6 +48,23 @@ const calendarData = {
 }
 
 export default class Home extends React.Component {
+
+	componentWillMount(){
+		this.setState({
+			"calendarData" : calendarData
+		});
+	}
+
+	onReservationClickHandle = (calendarEventData, day, hour) => {
+		const newState = Object.assign({},this.state.calendarData, {
+			[day] : {
+				[hour] : calendarEventData
+			}
+		});
+
+		this.setState(newState);
+	}
+
 	render(){
 		return (
 			<Container>
@@ -54,7 +75,11 @@ export default class Home extends React.Component {
 				</Row>
 				<Row>
 					<Col large="12">
-						<CalendarReservation className="rounded-container" calendarData={calendarData} activities={activities}/>
+						<CalendarReservation 
+						className="rounded-container" 
+						calendarData={calendarData} 
+						activities={activities}
+						onReservationClickHandle = {this.onReservationClickHandle}/>
 					</Col>
 				</Row>
 			</Container>

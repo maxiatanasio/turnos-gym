@@ -3,3 +3,8 @@
     -moz-box-shadow: 5px 8px 29px 0px rgba(0,0,0,0.28);
     box-shadow: 5px 8px 29px 0px rgba(0,0,0,0.28);
 }
+
+img{
+    width: 100%;
+    box-sizing: border-box;
+}

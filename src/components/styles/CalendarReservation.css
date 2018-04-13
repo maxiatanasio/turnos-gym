@@ -21,6 +21,10 @@
     border-collapse: collapse;
 }
 
+.calendar-reservation-table-container table tbody tr{
+    height: 65px;
+}
+
 .calendar-reservation-table-container table thead tr th{
     text-align: center;
     text-transform: uppercase;
@@ -67,8 +71,38 @@
     width: 100%;
     height: 100%;
     background: white;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .calendar-reservation-table-container table tbody tr td.has-activity{
     background-color: white;
+}
+
+.calendar-reservation-table-container .has-reservation{
+    width: 100%;
+}
+
+.calendar-reservation-table-container .has-reservation img{
+    width: 40px;
+    padding-top: 8px;
+    margin: auto;
+    display: block;
+}
+
+.calendar-reservation-table-container .has-reservation span{
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.calendar-reservation-table-container .no-reservation {
+    padding-top: 19px;
+}
+
+.calendar-reservation-table-container .no-reservation span{
+    text-align: center;
+    display: block;
 }
